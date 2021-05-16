@@ -9,9 +9,7 @@ COPY ./src/makefile /home/testApp/
 
 WORKDIR /home/testApp/
 
-RUN apt-get -y update
-RUN apt-get -y upgrade
-RUN apt-get -y install gcc make
+RUN apt-get update && apt-get install -y gcc make
 
 RUN make
 
